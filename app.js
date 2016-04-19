@@ -29,7 +29,7 @@
       get_gravatar()
     } 
     else {
-      `<img src=${options.image}>`
+      element.innerHTML += `<img src=${options.image}>`
     }
     element.innerHTML += `
     <h2>${options.messageTitle}</h2>
