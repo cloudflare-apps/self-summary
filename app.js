@@ -8,49 +8,31 @@
     element = Eager.createElement(options.location, element)
     element.classList.add(CONTAINER_CLASS)
 
-    const closeButton = document.createElement("eager-closeButton")
-
-    element.appendChild(closeButton)
-    closeButton.addEventListener("click", hide)
-
-    const image = document.createElement("img")
-
-    image.src = options.image
-    element.appendChild(image)
-
-    const header = document.createElement("h2")
-
-    header.innerText = options.messageTitle
-    element.appendChild(header)
-
-    const message = document.createElement("eager-message")
-
-    message.innerText = options.message
-    element.appendChild(message)
-
-    const email = document.createElement("eager-email")
-
-    email.innerText = `Email: ${options.email}`
-    element.appendChild(email)
-
-    const twitter = document.createElement("eager-twitter")
-
-    twitter.innerText = `Twitter: ${options.twitter}`
-    element.appendChild(twitter)
-
-    const facebook = document.createElement("eager-facebook")
-
-    facebook.innerText = `Facebook: ${options.facebook}`
-    element.appendChild(facebook)
-
-    const linkedIn = document.createElement("eager-linkedIn")
-
-    linkedIn.innerText = `LinkedIn: ${options.linkedIn}`
-    element.appendChild(linkedIn)
-
-    function hide() {
-      // document.removeChild(element)
+    element.innerHTML = `
+      <img src=${options.image}>
+      <h2>${options.messageTitle}</h2>
+      <eager-message>${options.message}</eager-message><br><br>`
+    if (options.emailToggle){
+      element.innerHTML += `<eager-email>Email: ${options.email}</eager-email><br>`
     }
+    if (options.twitterToggle){
+      element.innerHTML += `<eager-twitter>Twitter: ${options.twitter}</eager-email><br>`
+    }
+    if (options.facebookToggle){
+      element.innerHTML += `<eager-facebook>Facebook: ${options.facebook}</eager-facebook><br>`
+    }
+    if (options.linkedInToggle){
+      element.innerHTML += `<eager-linkedIn>LinkedIn: ${options.linkedIn}</eager-linkedIn>`
+    }
+    
+    // const closeButton = document.createElement("eager-closeButton")
+
+    // element.appendChild(closeButton)
+    // closeButton.addEventListener("click", hide)
+
+    // function hide() {
+    //   // document.removeChild(element)
+    // }
   }
 
   if (document.readyState === "loading") {
