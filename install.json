@@ -102,6 +102,12 @@
         "type": "string",
         "showIf": "linkedInToggle",
         "default": "linkedIn.com"
+      },
+      "gravatar": {
+        "order": 13,
+        "title": "gravatar",
+        "type": "boolean",
+        "default": true
       }
     }
   }
