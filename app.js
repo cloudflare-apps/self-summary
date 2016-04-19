@@ -8,52 +8,48 @@
     element = Eager.createElement(options.location, element)
     element.classList.add(CONTAINER_CLASS)
 
-    const selfSummary = document.createElement("eager-self-summary-content")
+    const closeButton = document.createElement("eager-closeButton")
 
-    element.appendChild(selfSummary)
-
-    const closeButton = document.createElement("eager-self-summary-content-closeButton")
-
-    selfSummary.appendChild(closeButton)
+    element.appendChild(closeButton)
     closeButton.addEventListener("click", hide)
 
     const image = document.createElement("img")
 
     image.src = options.image
-    selfSummary.appendChild(image)
+    element.appendChild(image)
 
     const header = document.createElement("h2")
 
     header.innerText = options.messageTitle
-    selfSummary.appendChild(header)
+    element.appendChild(header)
 
-    const message = document.createElement("eager-self-summary-content-message")
+    const message = document.createElement("eager-message")
 
     message.innerText = options.message
-    selfSummary.appendChild(message)
+    element.appendChild(message)
 
-    const email = document.createElement("eager-self-summary-content-email")
+    const email = document.createElement("eager-email")
 
     email.innerText = `Email: ${options.email}`
-    selfSummary.appendChild(email)
+    element.appendChild(email)
 
-    const twitter = document.createElement("eager-self-summary-content-twitter")
+    const twitter = document.createElement("eager-twitter")
 
     twitter.innerText = `Twitter: ${options.twitter}`
-    selfSummary.appendChild(twitter)
+    element.appendChild(twitter)
 
-    const facebook = document.createElement("eager-self-summary-content-facebook")
+    const facebook = document.createElement("eager-facebook")
 
     facebook.innerText = `Facebook: ${options.facebook}`
-    selfSummary.appendChild(facebook)
+    element.appendChild(facebook)
 
-    const linkedIn = document.createElement("eager-self-summary-content-linkedIn")
+    const linkedIn = document.createElement("eager-linkedIn")
 
     linkedIn.innerText = `LinkedIn: ${options.linkedIn}`
-    selfSummary.appendChild(linkedIn)
+    element.appendChild(linkedIn)
 
     function hide() {
-      element.removeChild(selfSummary)
+      // document.removeChild(element)
     }
   }
 
