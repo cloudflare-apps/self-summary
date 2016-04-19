@@ -36,7 +36,8 @@
         "order": 2,
         "title": "select your image",
         "type": "string",
-        "default": "https://scontent-dfw1-1.xx.fbcdn.net/hphotos-xaf1/v/t1.0-9/12079669_10205164599414204_5568583806372243382_n.jpg?oh=1ab0e137c9a3de49816b137f2047fc6e&oe=5776917C"
+        "format": "image",
+        "default": "http://madeworthy.com/wp-content/uploads/2015/01/gravatar-logo-512.jpg"
       },
       "messageTitle": {
         "order": 3,
