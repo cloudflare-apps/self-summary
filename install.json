@@ -81,7 +81,7 @@
         "title": "Twitter",
         "type": "string",
         "showIf": "twitterToggle",
-        "default": "twitter.com"
+        "default": "https://www.twitter.com"
       },
       "facebookToggle": {
         "order": 10,
@@ -94,7 +94,7 @@
         "title": "Facebook",
         "type": "string",
         "showIf": "facebookToggle",
-        "default": "facebook.com"
+        "default": "https://www.facebook.com"
       },
       "linkedInToggle": {
         "order": 12,
@@ -107,7 +107,7 @@
         "title": "LinkedIn",
         "type": "string",
         "showIf": "linkedInToggle",
-        "default": "linkedIn.com"
+        "default": "https://www.linkedIn.com"
       }
     }
   }
