@@ -38,7 +38,7 @@
       element.innerHTML += `<eager-email>Email: ${options.email}</eager-email><br>`
     }
     if (options.twitterToggle){
-      element.innerHTML += `<eager-twitter>Twitter: ${options.twitter}</eager-email><br>`
+      element.innerHTML += `<eager-twitter>Twitter: ${options.twitter}</eager-twitter><br>`
     }
     if (options.facebookToggle){
       element.innerHTML += `<eager-facebook>Facebook: ${options.facebook}</eager-facebook><br>`
