@@ -1,3 +1,46 @@
 .eager-self-summary {
   display: block;
 }
+
+eager-self-summary-content {
+  -webkit-font-smoothing: antialiased;
+  display: block;
+  padding: 2em;
+  text-indent: 0;
+  margin: 1em 0;
+  text-decoration: none;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+eager-self-summary-content-closeButton:after {
+  position: absolute;
+  display: block;
+  content: "✕";
+  cursor: pointer;
+  z-index: 20007;
+  top: 1em;
+  right: 1em;
+  height: 2em;
+  width: 2em;
+  font-size: 1.25em;
+  font-family: Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-align: center;
+  line-height: 2;
+  color: rgba(0, 0, 0, .35);
+  border-radius: 3px;
+}
+
+eager-self-summary-content-closeButton:hover:after {
+  background: rgba(255, 255, 255, .35);
+  color: #000;
+}
+
+img {
+  border-radius: 50%;
+  height: 5em;
+  width: 5em;
+  display: block;
+  max-width: 100%;
+}
