@@ -39,75 +39,75 @@
         "format": "image",
         "default": "http://madeworthy.com/wp-content/uploads/2015/01/gravatar-logo-512.jpg"
       },
-      "messageTitle": {
+      "gravatar": {
         "order": 3,
+        "title": "Use my gravatar instead!",
+        "type": "boolean",
+        "default": false
+      },
+      "messageTitle": {
+        "order": 4,
         "title": "Message Title",
         "type": "string",
         "default": "Hello!"
       },
       "message": {
-        "order": 4,
+        "order": 5,
         "title": "Message",
         "type": "string",
         "default": "This is my webpage!"
       },
       "emailToggle": {
-        "order": 5,
+        "order": 6,
         "title": "Add Email information",
         "type": "boolean",
         "default": true
       },
       "email": {
-        "order": 6,
+        "order": 7,
         "title": "Email",
         "type": "string",
         "showIf": "emailToggle",
         "default": "your@email.com"
       },
       "twitterToggle": {
-        "order": 7,
+        "order": 8,
         "title": "Add Twitter information",
         "type": "boolean",
         "default": true
       },
       "twitter": {
-        "order": 8,
+        "order": 9,
         "title": "Twitter",
         "type": "string",
         "showIf": "twitterToggle",
         "default": "twitter.com"
       },
       "facebookToggle": {
-        "order": 9,
+        "order": 10,
         "title": "Add Facebook information",
         "type": "boolean",
         "default": true
       },
       "facebook": {
-        "order": 10,
+        "order": 11,
         "title": "Facebook",
         "type": "string",
         "showIf": "facebookToggle",
         "default": "facebook.com"
       },
       "linkedInToggle": {
-        "order": 11,
+        "order": 12,
         "title": "Add LinkedIn information",
         "type": "boolean",
         "default": true
       },
       "linkedIn": {
-        "order": 12,
+        "order": 13,
         "title": "LinkedIn",
         "type": "string",
         "showIf": "linkedInToggle",
         "default": "linkedIn.com"
-      },
-      "gravatar": {
-        "order": 13,
-        "title": "gravatar",
-        "type": "boolean",
-        "default": true
       }
     }
   }
