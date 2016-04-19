@@ -22,15 +22,57 @@
   "options": {
     "properties": {
       "location": {
-        "title": "Summar location",
+        "title": "Summary location",
         "description": "Where should the summary appear on the page?",
-        "order": 0,
+        "order": 1,
         "type": "object",
         "format": "element",
         "default": {
           "selector": "body",
           "method": "prepend"
         }
+      },
+      "image": {
+        "order": 2,
+        "title": "select your image",
+        "type": "string",
+        "default": "https://scontent-dfw1-1.xx.fbcdn.net/hphotos-xaf1/v/t1.0-9/12079669_10205164599414204_5568583806372243382_n.jpg?oh=1ab0e137c9a3de49816b137f2047fc6e&oe=5776917C"
+      },
+      "messageTitle": {
+        "order": 3,
+        "title": "Message Title",
+        "type": "string",
+        "default": "Hello!"
+      },
+      "message": {
+        "order": 4,
+        "title": "Message",
+        "type": "string",
+        "default": "This is my webpage!"
+      },
+      "email": {
+        "order": 5,
+        "title": "Email",
+        "type": "string",
+        "default": "your@email.com"
+      },
+      "twitter": {
+        "order": 6,
+        "title": "Twitter",
+        "type": "string",
+        "default": "twitter.com"
+      },
+      "facebook": {
+        "order": 7,
+        "title": "Facebook",
+        "type": "string",
+        "default": "facebook.com"
+      },
+      "linkedIn": {
+        "order": 8,
+        "title": "LinkedIn",
+        "type": "string",
+        "default": "linkedIn.com"
       }
     }
   }
