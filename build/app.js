@@ -103,16 +103,16 @@
     }
     element.innerHTML += "\n    <h2>" + options.messageTitle + "</h2>\n    <eager-message>" + options.message + "</eager-message><br><br>";
     if (options.email) {
-      element.innerHTML += "<a class=\"email\" href=\"mailto:" + options.email + "\"></a><padding></padding>";
+      element.innerHTML += "<a class=\"social\" data-icon=\"email\" href=\"mailto:" + options.email + "\"></a><padding></padding>";
     }
     if (options.twitter) {
-      element.innerHTML += "<a class=\"twitter\" href=\"https://www.twitter.com/" + options.twitter + "\"></a><padding></padding>";
+      element.innerHTML += "<a class=\"social\" data-icon=\"twitter\" href=\"https://www.twitter.com/" + options.twitter + "\"></a><padding></padding>";
     }
     if (options.facebook) {
-      element.innerHTML += "<a class=\"facebook\" href=\"https://www.facebook.com/" + options.facebook + "\"></a><padding></padding>";
+      element.innerHTML += "<a class=\"social\" data-icon=\"facebook\" href=\"https://www.facebook.com/" + options.facebook + "\"></a><padding></padding>";
     }
     if (options.linkedIn) {
-      element.innerHTML += "<a class=\"linkedIn\" href=\"https://www.linkedin.com/in/" + options.linkedIn + "\"></a>";
+      element.innerHTML += "<a class=\"social\" data-icon=\"linkedIn\" href=\"https://www.linkedin.com/in/" + options.linkedIn + "\"></a>";
     }
   }
 
