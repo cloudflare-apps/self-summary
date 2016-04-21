@@ -94,14 +94,14 @@
 
         var gravatarURL = "http://www.gravatar.com/avatar/" + emailResult + jpg + size;
 
-        element.innerHTML += "<img class=\"eager-avatar\" src=" + gravatarURL + ">";
+        element.innerHTML += "<eager-avatar style=\"background-image: url('" + gravatarURL + "');\"></eager-avatar>";
       };
 
       get_gravatar();
     } else {
-      element.innerHTML += "<img class=\"eager-avatar\" src=" + options.image + ">";
+      element.innerHTML += "<eager-avatar style=\"background-image: url(" + options.image + ");\"></eager-avatar>";
     }
-    element.innerHTML += "\n    <h2>" + options.messageTitle + "</h2>\n    <eager-message>" + options.message + "</eager-message><br><br>";
+    element.innerHTML += "<eager-message>" + options.message.html + "</eager-message>";
     if (options.email) {
       element.innerHTML += "<a class=\"eager-social\" data-icon=\"email\" href=\"mailto:" + options.email + "\"></a><eager-padding></eager-padding>";
     }
