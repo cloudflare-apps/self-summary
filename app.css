@@ -9,18 +9,17 @@ img.avatar {
   border-radius: 50%;
   height: 5em;
   width: 5em;
-  display: block;
   max-width: 100%;
 }
 
+.email{
+  padding-right: 1em;
+}
+
 .twitter{
-  padding-left: 1em;
+  padding-right: 1em;
 }
 
 .facebook{
-  padding-left: 1em;
-}
-
-.linkedIn{
-  padding-left: 1em;
+  padding-right: 1em;
 }
