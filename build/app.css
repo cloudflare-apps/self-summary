@@ -5,11 +5,13 @@
   margin: 1em 0;
 }
 
-img.eager-avatar {
+eager-avatar {
   border-radius: 50%;
   height: 5em;
   width: 5em;
   max-width: 100%;
+  display: block;
+  background-size: cover;
 }
 
 .eager-social {

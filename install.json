@@ -48,39 +48,35 @@
         "type": "boolean",
         "default": false
       },
-      "messageTitle": {
-        "order": 4,
-        "title": "Message Title",
-        "type": "string",
-        "default": "Hello!"
-      },
       "message": {
-        "order": 5,
+        "order": 4,
         "title": "Message",
+        "description": "Your message can support Markdown. <a target=\"_blank\" href=\"https://en.wikipedia.org/wiki/Markdown#Example\" class=\"more with-inherited-color\"><strong>Learn more</strong></a>",
         "type": "string",
-        "default": "This is my webpage!"
+        "format": "markdown",
+        "default": "#Welcome!\n\n This is my webpage! I like to keep this page updated with hobbies from time to time, so please keep coming. You can always contact me with any of the methods below."
       },
       "email": {
-        "order": 6,
+        "order": 5,
         "title": "Email",
         "type": "string",
         "placeholder": "your@email.com"
       },
       "twitter": {
-        "order": 7,
+        "order": 6,
         "title": "Twitter Username",
         "type": "string",
         "placeholder": "YourUsername"
       },
       "facebook": {
-        "order": 8,
+        "order": 7,
         "title": "Facebook",
         "description": "Put whatever comes after facebook when you are on your profile page. ie www.facebook.com/[enter this information]",
         "type": "string",
         "placeholder": "your.name"
       },
       "linkedIn": {
-        "order": 9,
+        "order": 8,
         "title": "LinkedIn",
         "description": "You can find your profile link underneath your picture when you view your profile. www.linkedin.com/in/[enter this information]",
         "type": "string",

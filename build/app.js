@@ -21,9 +21,8 @@
 
     var imageSrc = options.image ? options.image : gravatarURL(options.email);
 
-    element.innerHTML += "<img class=\"eager-avatar\" src=" + imageSrc + ">";
-
-    element.innerHTML += "\n      <h2>" + options.messageTitle + "</h2>\n      <eager-message>" + options.message + "</eager-message>\n    ";
+    element.innerHTML += "<eager-avatar style=\"background-image: url(" + imageSrc + ");\"></eager-avatar>";
+    element.innerHTML += "<eager-message>" + options.message.html + "</eager-message>";
 
     if (options.email) {
       element.innerHTML += "<a class=\"eager-social\" data-icon=\"email\" href=\"mailto:" + options.email + "\"></a>";
