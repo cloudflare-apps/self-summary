@@ -11,7 +11,16 @@ img.avatar {
   width: 5em;
   display: block;
   max-width: 100%;
-  -moz-box-shadow:    3px 3px 5px 6px #ccc;
-  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
-  box-shadow:         3px 3px 5px 6px #ccc;
+}
+
+.twitter{
+  padding-left: 1em;
+}
+
+.facebook{
+  padding-left: 1em;
+}
+
+.linkedIn{
+  padding-left: 1em;
 }
