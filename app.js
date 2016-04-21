@@ -44,7 +44,7 @@
       element.innerHTML += `<a class="facebook" href="https://www.facebook.com/${options.facebook}"></a><padding></padding>`
     }
     if (options.linkedIn){
-      element.innerHTML += `<a class="linkedIn" href="https://www.linkedin.com/in/${options.linkedIn}"></a><padding></padding>`
+      element.innerHTML += `<a class="linkedIn" href="https://www.linkedin.com/in/${options.linkedIn}"></a>`
     }
   }
 
