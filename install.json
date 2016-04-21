@@ -65,21 +65,23 @@
       },
       "twitter": {
         "order": 7,
-        "title": "Twitter",
+        "title": "Twitter Username",
         "type": "string",
-        "placeholder": "https://www.twitter.com"
+        "placeholder": "YourUsername"
       },
       "facebook": {
         "order": 8,
         "title": "Facebook",
+        "description": "Put whatever comes after facebook when you are on your profile page. ie www.facebook.com/[enter this information]",
         "type": "string",
-        "placeholder": "https://www.facebook.com"
+        "placeholder": "your.name"
       },
       "linkedIn": {
         "order": 9,
         "title": "LinkedIn",
+        "description": "You can find your profile link underneath your picture when you view your profile. www.linkedin.com/in/[enter this information]",
         "type": "string",
-        "placeholder": "https://www.linkedIn.com"
+        "placeholder": "your-name-123a4567"
       }
     }
   }
