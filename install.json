@@ -7,6 +7,10 @@
       },
       {
         "type": "script",
+        "src": "./vendor/gravatar.js"
+      },
+      {
+        "type": "script",
         "src": "./build/app.js"
       }
     ]
@@ -36,8 +40,7 @@
         "order": 2,
         "title": "select your image",
         "type": "string",
-        "format": "image",
-        "default": "http://madeworthy.com/wp-content/uploads/2015/01/gravatar-logo-512.jpg"
+        "format": "image"
       },
       "gravatar": {
         "order": 3,
