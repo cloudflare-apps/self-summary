@@ -57,57 +57,29 @@
         "type": "string",
         "default": "This is my webpage!"
       },
-      "emailToggle": {
-        "order": 6,
-        "title": "Add Email information",
-        "type": "boolean",
-        "default": true
-      },
       "email": {
-        "order": 7,
+        "order": 6,
         "title": "Email",
         "type": "string",
-        "showIf": "emailToggle",
-        "default": "your@email.com"
-      },
-      "twitterToggle": {
-        "order": 8,
-        "title": "Add Twitter information",
-        "type": "boolean",
-        "default": true
+        "placeholder": "your@email.com"
       },
       "twitter": {
-        "order": 9,
+        "order": 7,
         "title": "Twitter",
         "type": "string",
-        "showIf": "twitterToggle",
-        "default": "https://www.twitter.com"
-      },
-      "facebookToggle": {
-        "order": 10,
-        "title": "Add Facebook information",
-        "type": "boolean",
-        "default": true
+        "placeholder": "https://www.twitter.com"
       },
       "facebook": {
-        "order": 11,
+        "order": 8,
         "title": "Facebook",
         "type": "string",
-        "showIf": "facebookToggle",
-        "default": "https://www.facebook.com"
-      },
-      "linkedInToggle": {
-        "order": 12,
-        "title": "Add LinkedIn information",
-        "type": "boolean",
-        "default": true
+        "placeholder": "https://www.facebook.com"
       },
       "linkedIn": {
-        "order": 13,
+        "order": 9,
         "title": "LinkedIn",
         "type": "string",
-        "showIf": "linkedInToggle",
-        "default": "https://www.linkedIn.com"
+        "placeholder": "https://www.linkedIn.com"
       }
     }
   }
