@@ -36,19 +36,35 @@
           "method": "prepend"
         }
       },
-      "image": {
-        "order": 2,
-        "title": "select your image",
-        "type": "string",
-        "format": "image"
-      },
       "message": {
-        "order": 4,
+        "order": 2,
         "title": "Message",
         "description": "Your message can support Markdown. <a target=\"_blank\" href=\"https://en.wikipedia.org/wiki/Markdown#Example\" class=\"more with-inherited-color\"><strong>Learn more</strong></a>",
         "type": "string",
         "format": "markdown",
         "default": "#Welcome!\n\n This is my webpage! I like to keep this page updated with hobbies from time to time, so please keep coming. You can always contact me with any of the methods below."
+      },
+      "image": {
+        "order": 3,
+        "title": "select your image",
+        "type": "string",
+        "format": "image"
+      },
+      "position": {
+        "order": 4,
+        "title": "Position",
+        "type": "string",
+        "default": "left",
+        "enum": [
+          "left",
+          "center",
+          "right"
+        ],
+        "enumNames": {
+          "left": "Left",
+          "center": "Center",
+          "right": "Right"
+        }
       },
       "email": {
         "order": 5,
