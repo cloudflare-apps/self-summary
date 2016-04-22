@@ -21,8 +21,9 @@
 
     var imageSrc = options.image ? options.image : gravatarURL(options.email);
     var wrapper = document.createElement("eager-wrapper");
+
     // TODO: something like
-    // wrapper.setAttribute('data-position', options.position)
+    wrapper.setAttribute("data-position", options.position);
 
     wrapper.innerHTML = "\n      <eager-details>\n        <eager-avatar style=\"background-image: url(" + imageSrc + ");\"></eager-avatar>\n        <eager-message>" + options.message.html + "</eager-message>\n      </eager-details>\n    ";
 

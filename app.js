@@ -16,8 +16,9 @@
 
     const imageSrc = options.image ? options.image : gravatarURL(options.email)
     const wrapper = document.createElement("eager-wrapper")
+
     // TODO: something like
-    // wrapper.setAttribute('data-position', options.position)
+    wrapper.setAttribute("data-position", options.position)
 
     wrapper.innerHTML = `
       <eager-details>
