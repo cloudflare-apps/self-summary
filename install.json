@@ -42,12 +42,6 @@
         "type": "string",
         "format": "image"
       },
-      "gravatar": {
-        "order": 3,
-        "title": "Use my gravatar instead!",
-        "type": "boolean",
-        "default": false
-      },
       "message": {
         "order": 4,
         "title": "Message",
@@ -70,8 +64,8 @@
       },
       "facebook": {
         "order": 7,
-        "title": "Facebook",
-        "description": "Put whatever comes after facebook when you are on your profile page. ie www.facebook.com/[enter this information]",
+        "title": "Facebook User ID",
+        "description": "You can find your User ID by visting your <a href='www.facebook.com/' target='_blank'>Facebook profile</a>. www.facebook.com/[your user ID]",
         "type": "string",
         "placeholder": "your.name"
       },
