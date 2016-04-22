@@ -1,17 +1,29 @@
 .eager-self-summary {
   display: block;
-  -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased; /* TODO Talk about */
   padding: 2em;
   margin: 1em 0;
 }
 
-eager-avatar {
-  border-radius: 50%;
-  height: 5em;
-  width: 5em;
-  max-width: 100%;
+eager-wrapper {
   display: block;
+  max-width: 500px;
+}
+
+eager-details {
+  display: block;
+}
+
+eager-avatar {
   background-size: cover;
+  border-radius: 50%;
+  display: inline-block;
+  float: left;
+  height: 5em;
+  margin-right: 1.3em;
+  margin-top: 2em;
+  max-width: 100%;
+  width: 5em;
 }
 
 .eager-social:before {
@@ -24,7 +36,7 @@ eager-avatar {
   background-position: center;
 }
 
-.eager-social{
+.eager-social {
   display: inline-block;
   height: 3em;
   width: 3em;
