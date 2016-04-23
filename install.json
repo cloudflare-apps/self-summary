@@ -38,23 +38,58 @@
       },
       "message": {
         "order": 2,
-        "title": "Message",
-        "description": "Your message can support Markdown. <a target=\"_blank\" href=\"https://en.wikipedia.org/wiki/Markdown#Example\" class=\"more with-inherited-color\"><strong>Learn more</strong></a>",
+        "title": "Self summary",
+        "description": "A short message about yourself written with <a target=\"_blank\" href=\"https://en.wikipedia.org/wiki/Markdown#Example\" class=\"more with-inherited-color\"><strong>Markdown</strong></a>",
         "type": "string",
         "format": "markdown",
-        "default": "#Welcome!\n\n This is my webpage! I like to keep this page updated with hobbies from time to time, so please keep coming. You can always contact me with any of the methods below."
+        "default": "# Author, musician, designer.\nHi there! My name's John Smith and this is my creative blog. I live in the bay area with my two dogs and write about the future of web design.\n\nNeed a freelance writer? Let's get in touch!"
       },
-      "image": {
+      "profilePicture": {
         "order": 3,
-        "title": "select your image",
-        "type": "string",
-        "format": "image"
+        "type": "object",
+        "title": "Profile picture",
+        "description": "An image that represents you online.",
+        "properties": {
+          "type": {
+            "order": 1,
+            "title": "What image should we use?",
+            "type": "string",
+            "format": "radios",
+            "default": "gravatar",
+            "enum": [
+              "gravatar",
+              "upload"
+            ],
+            "enumNames": {
+              "gravatar": "Use my Gravatar email. <a target=\"_blank\" href=\"https://en.gravatar.com/support/what-is-gravatar/\" class=\"more with-inherited-color\"><strong>Learn more</strong></a>",
+              "upload": "Upload my own image."
+            }
+          },
+          "gravatarEmail": {
+            "order": 2,
+            "showIf": {
+              "profilePicture.type": "gravatar"
+            },
+            "title": "Gravatar email",
+            "type": "string",
+            "placeholder": "your@email.com"
+          },
+          "url": {
+            "order": 2,
+            "showIf": {
+              "profilePicture.type": "upload"
+            },
+            "title": "Select your image",
+            "type": "string",
+            "format": "image"
+          }
+        }
       },
       "position": {
         "order": 4,
-        "title": "Position",
+        "title": "Horizontal alignment",
         "type": "string",
-        "default": "left",
+        "default": "center",
         "enum": [
           "left",
           "center",
@@ -65,32 +100,6 @@
           "center": "Center",
           "right": "Right"
         }
-      },
-      "email": {
-        "order": 5,
-        "title": "Email",
-        "type": "string",
-        "placeholder": "your@email.com"
-      },
-      "twitter": {
-        "order": 6,
-        "title": "Twitter Username",
-        "type": "string",
-        "placeholder": "YourUsername"
-      },
-      "facebook": {
-        "order": 7,
-        "title": "Facebook User ID",
-        "description": "You can find your User ID by visting your <a href='www.facebook.com/' target='_blank'>Facebook profile</a>. www.facebook.com/[your user ID]",
-        "type": "string",
-        "placeholder": "your.name"
-      },
-      "linkedIn": {
-        "order": 8,
-        "title": "LinkedIn",
-        "description": "You can find your profile link underneath your picture when you view your <a href='www.linkedin.com/' target='_blank'>LinkedIn profile</a>.www.linkedin.com/in/[enter this information]",
-        "type": "string",
-        "placeholder": "your-name-123a4567"
       }
     }
   }

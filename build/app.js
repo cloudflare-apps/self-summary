@@ -12,36 +12,22 @@
 
     var emailMd5 = window.EagerGravatar.md5(email.toLowerCase());
 
-    return "http://www.gravatar.com/avatar/" + emailMd5 + ".jpg?s=" + size;
+    return "https://www.gravatar.com/avatar/" + emailMd5 + ".jpg?s=" + size;
   }
 
   function updateElement() {
     element = Eager.createElement(options.location, element);
     element.classList.add(CONTAINER_CLASS);
 
-    var imageSrc = options.image ? options.image : gravatarURL(options.email);
+    element.setAttribute("data-position", options.position);
+
+    var _options = options;
+    var profilePicture = _options.profilePicture;
+
+    var imageSrc = profilePicture.type === "upload" && profilePicture.url || gravatarURL(profilePicture.gravatarEmail);
     var wrapper = document.createElement("eager-wrapper");
 
-    // TODO: something like
-    wrapper.setAttribute("data-position", options.position);
-
-    wrapper.innerHTML = "\n      <eager-details>\n        <eager-avatar style=\"background-image: url(" + imageSrc + ");\"></eager-avatar>\n        <eager-message>" + options.message.html + "</eager-message>\n      </eager-details>\n    ";
-
-    if (options.email) {
-      wrapper.innerHTML += "<a class=\"eager-social\" data-icon=\"email\" href=\"mailto:" + options.email + "\"></a>";
-    }
-
-    if (options.twitter) {
-      wrapper.innerHTML += "<a class=\"eager-social\" data-icon=\"twitter\" href=\"https://www.twitter.com/" + options.twitter + "\"></a>";
-    }
-
-    if (options.facebook) {
-      wrapper.innerHTML += "<a class=\"eager-social\" data-icon=\"facebook\" href=\"https://www.facebook.com/" + options.facebook + "\"></a>";
-    }
-
-    if (options.linkedIn) {
-      wrapper.innerHTML += "<a class=\"eager-social\" data-icon=\"linkedIn\" href=\"https://www.linkedin.com/in/" + options.linkedIn + "\"></a>";
-    }
+    wrapper.innerHTML = "\n      <eager-details>\n        <eager-profile-picture style=\"background-image: url(" + imageSrc + ");\"></eager-profile-picture>\n        <eager-message>" + options.message.html + "</eager-message>\n      </eager-details>\n    ";
 
     element.appendChild(wrapper);
   }
