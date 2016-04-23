@@ -88,7 +88,7 @@
       "linkedIn": {
         "order": 8,
         "title": "LinkedIn",
-        "description": "You can find your profile link underneath your picture when you view your profile. www.linkedin.com/in/[enter this information]",
+        "description": "You can find your profile link underneath your picture when you view your <a href='www.linkedin.com/' target='_blank'>LinkedIn profile</a>.www.linkedin.com/in/[enter this information]",
         "type": "string",
         "placeholder": "your-name-123a4567"
       }
