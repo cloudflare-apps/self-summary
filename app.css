@@ -22,6 +22,16 @@ eager-wrapper[data-position="right"]{
   margin-left: auto;
 }
 
+eager-icons[data-position="center"]{
+  display: inline-block;
+  margin-left: 8.1em;
+}
+
+eager-icons[data-position="right"]{
+  display: inline-block;
+  margin-left: 8.1em;
+}
+
 eager-details {
   display: block;
 }
