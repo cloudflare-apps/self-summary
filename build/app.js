@@ -22,25 +22,29 @@
     var imageSrc = options.image ? options.image : gravatarURL(options.email);
     var wrapper = document.createElement("eager-wrapper");
 
-    // TODO: something like
     wrapper.setAttribute("data-position", options.position);
 
     wrapper.innerHTML = "\n      <eager-details>\n        <eager-avatar style=\"background-image: url(" + imageSrc + ");\"></eager-avatar>\n        <eager-message>" + options.message.html + "</eager-message>\n      </eager-details>\n    ";
+    var icons = document.createElement("eager-icons");
+
+    icons.setAttribute("data-position", options.position);
+
+    wrapper.appendChild(icons);
 
     if (options.email) {
-      wrapper.innerHTML += "<a class=\"eager-social\" data-icon=\"email\" href=\"mailto:" + options.email + "\"></a>";
+      icons.innerHTML += "<a class=\"eager-social\" data-icon=\"email\" href=\"mailto:" + options.email + "\"></a>";
     }
 
     if (options.twitter) {
-      wrapper.innerHTML += "<a class=\"eager-social\" data-icon=\"twitter\" href=\"https://www.twitter.com/" + options.twitter + "\"></a>";
+      icons.innerHTML += "<a class=\"eager-social\" data-icon=\"twitter\" href=\"https://www.twitter.com/" + options.twitter + "\"></a>";
     }
 
     if (options.facebook) {
-      wrapper.innerHTML += "<a class=\"eager-social\" data-icon=\"facebook\" href=\"https://www.facebook.com/" + options.facebook + "\"></a>";
+      icons.innerHTML += "<a class=\"eager-social\" data-icon=\"facebook\" href=\"https://www.facebook.com/" + options.facebook + "\"></a>";
     }
 
     if (options.linkedIn) {
-      wrapper.innerHTML += "<a class=\"eager-social\" data-icon=\"linkedIn\" href=\"https://www.linkedin.com/in/" + options.linkedIn + "\"></a>";
+      icons.innerHTML += "<a class=\"eager-social\" data-icon=\"linkedIn\" href=\"https://www.linkedin.com/in/" + options.linkedIn + "\"></a>";
     }
 
     element.appendChild(wrapper);
