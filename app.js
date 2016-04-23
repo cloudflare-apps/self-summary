@@ -7,41 +7,25 @@
   function gravatarURL(email = "", size = 160) {
     const emailMd5 = window.EagerGravatar.md5(email.toLowerCase())
 
-    return `http://www.gravatar.com/avatar/${emailMd5}.jpg?s=${size}`
+    return `https://www.gravatar.com/avatar/${emailMd5}.jpg?s=${size}`
   }
 
   function updateElement() {
     element = Eager.createElement(options.location, element)
     element.classList.add(CONTAINER_CLASS)
 
-    const imageSrc = options.image ? options.image : gravatarURL(options.email)
-    const wrapper = document.createElement("eager-wrapper")
+    element.setAttribute("data-position", options.position)
 
-    // TODO: something like
-    wrapper.setAttribute("data-position", options.position)
+    const {profilePicture} = options
+    const imageSrc = profilePicture.type === "upload" && profilePicture.url || gravatarURL(profilePicture.gravatarEmail)
+    const wrapper = document.createElement("eager-wrapper")
 
     wrapper.innerHTML = `
       <eager-details>
-        <eager-avatar style="background-image: url(${imageSrc});"></eager-avatar>
+        <eager-profile-picture style="background-image: url(${imageSrc});"></eager-profile-picture>
         <eager-message>${options.message.html}</eager-message>
       </eager-details>
     `
-
-    if (options.email) {
-      wrapper.innerHTML += `<a class="eager-social" data-icon="email" href="mailto:${options.email}"></a>`
-    }
-
-    if (options.twitter) {
-      wrapper.innerHTML += `<a class="eager-social" data-icon="twitter" href="https://www.twitter.com/${options.twitter}"></a>`
-    }
-
-    if (options.facebook) {
-      wrapper.innerHTML += `<a class="eager-social" data-icon="facebook" href="https://www.facebook.com/${options.facebook}"></a>`
-    }
-
-    if (options.linkedIn) {
-      wrapper.innerHTML += `<a class="eager-social" data-icon="linkedIn" href="https://www.linkedin.com/in/${options.linkedIn}"></a>`
-    }
 
     element.appendChild(wrapper)
   }
