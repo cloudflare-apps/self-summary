@@ -21,13 +21,21 @@
 
     element.setAttribute("data-position", options.position);
 
-    var _options = options;
-    var profilePicture = _options.profilePicture;
+    var _options$profilePictu = options.profilePicture;
+    var gravatarEmail = _options$profilePictu.gravatarEmail;
+    var pictureType = _options$profilePictu.type;
+    var pictureURL = _options$profilePictu.url;
 
-    var imageSrc = profilePicture.type === "upload" && profilePicture.url || gravatarURL(profilePicture.gravatarEmail);
     var wrapper = document.createElement("eager-wrapper");
+    var profileTemplate = "";
 
-    wrapper.innerHTML = "\n      <eager-details>\n        <eager-profile-picture style=\"background-image: url(" + imageSrc + ");\"></eager-profile-picture>\n        <eager-message>" + options.message.html + "</eager-message>\n      </eager-details>\n    ";
+    if (pictureType !== "none") {
+      var imageSrc = pictureType === "upload" && pictureURL || gravatarURL(gravatarEmail);
+
+      profileTemplate = "<eager-profile-picture style=\"background-image: url('" + imageSrc + "');\"></eager-profile-picture>";
+    }
+
+    wrapper.innerHTML = "\n      <eager-details>\n        " + profileTemplate + "\n        <eager-message>" + options.message.html + "</eager-message>\n      </eager-details>\n    ";
 
     element.appendChild(wrapper);
   }
@@ -38,7 +46,7 @@
     updateElement();
   }
 
-  INSTALL_SCOPE = {
+  window.INSTALL_SCOPE = {
     setOptions: function setOptions(nextOptions) {
       options = nextOptions;
 

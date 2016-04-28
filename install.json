@@ -58,11 +58,13 @@
             "default": "gravatar",
             "enum": [
               "gravatar",
-              "upload"
+              "upload",
+              "none"
             ],
             "enumNames": {
               "gravatar": "Use my Gravatar email. <a target=\"_blank\" href=\"https://en.gravatar.com/support/what-is-gravatar/\" class=\"more with-inherited-color\"><strong>Learn more</strong></a>",
-              "upload": "Upload my own image."
+              "upload": "Upload my own image.",
+              "none": "Don't show an image."
             }
           },
           "gravatarEmail": {

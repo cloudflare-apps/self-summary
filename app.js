@@ -16,13 +16,20 @@
 
     element.setAttribute("data-position", options.position)
 
-    const {profilePicture} = options
-    const imageSrc = profilePicture.type === "upload" && profilePicture.url || gravatarURL(profilePicture.gravatarEmail)
+    const {gravatarEmail, type: pictureType, url: pictureURL} = options.profilePicture
     const wrapper = document.createElement("eager-wrapper")
+    let profileTemplate = ""
+
+    if (pictureType !== "none") {
+      const imageSrc = pictureType === "upload" && pictureURL || gravatarURL(gravatarEmail)
+
+      profileTemplate = `<eager-profile-picture style="background-image: url('${imageSrc}');"></eager-profile-picture>`
+    }
+
 
     wrapper.innerHTML = `
       <eager-details>
-        <eager-profile-picture style="background-image: url(${imageSrc});"></eager-profile-picture>
+        ${profileTemplate}
         <eager-message>${options.message.html}</eager-message>
       </eager-details>
     `
@@ -37,7 +44,7 @@
     updateElement()
   }
 
-  INSTALL_SCOPE = {
+  window.INSTALL_SCOPE = {
     setOptions(nextOptions) {
       options = nextOptions
 
