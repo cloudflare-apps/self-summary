@@ -33,6 +33,36 @@
   display: block;
 }
 
+.eager-self-summary eager-message p:last-of-type {
+  margin-bottom: 0.5em;
+}
+
+.eager-self-summary eager-icons {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 0.5em;
+}
+
+.eager-self-summary [data-eager-icon] {
+  height: 2.5em;
+  width: 2.5em;
+}
+
+.eager-self-summary [data-eager-icon] + [data-eager-icon] {
+  margin-left: 0.5em;
+}
+
+.eager-self-summary [data-eager-icon] > svg {
+  height: 100%;
+  width: 100%;
+}
+
 .eager-self-summary eager-profile-picture {
   background-size: cover;
   border-radius: 50%;

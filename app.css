@@ -33,6 +33,30 @@
   display: block;
 }
 
+.eager-self-summary eager-message p:last-of-type {
+  margin-bottom: 0.5em;
+}
+
+.eager-self-summary eager-icons {
+  align-items: center;
+  display: flex;
+  margin-bottom: 0.5em;
+}
+
+.eager-self-summary [data-eager-icon] {
+  height: 2.5em;
+  width: 2.5em;
+}
+
+.eager-self-summary [data-eager-icon] + [data-eager-icon] {
+  margin-left: 0.5em;
+}
+
+.eager-self-summary [data-eager-icon] > svg {
+  height: 100%;
+  width: 100%;
+}
+
 .eager-self-summary eager-profile-picture {
   background-size: cover;
   border-radius: 50%;
