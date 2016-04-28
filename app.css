@@ -4,7 +4,11 @@
 }
 
 .eager-self-summary eager-wrapper {
+  border: 1px solid transparent;
+  border-radius: 2px;
+  box-sizing: border-box;
   display: block;
+  padding: 1.5em;
 }
 
 @media (min-width: 500px) {
@@ -25,12 +29,41 @@
   margin-left: auto;
 }
 
+.eager-self-summary[data-background-visibility="visible"] eager-wrapper {
+  border-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
 .eager-self-summary eager-details {
   display: block;
 }
 
 .eager-self-summary eager-message {
   display: block;
+}
+
+.eager-self-summary eager-message p:last-of-type {
+  margin-bottom: 0;
+}
+
+.eager-self-summary eager-icons {
+  align-items: center;
+  display: flex;
+  margin-top: 1em;
+}
+
+.eager-self-summary [data-eager-icon] {
+  height: 2.5em;
+  width: 2.5em;
+}
+
+.eager-self-summary [data-eager-icon] + [data-eager-icon] {
+  margin-left: 0.5em;
+}
+
+.eager-self-summary [data-eager-icon] > svg {
+  height: 100%;
+  width: 100%;
 }
 
 .eager-self-summary eager-profile-picture {

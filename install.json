@@ -36,6 +36,7 @@
           "method": "prepend"
         }
       },
+
       "message": {
         "order": 2,
         "title": "Self summary",
@@ -44,6 +45,7 @@
         "format": "markdown",
         "default": "# Author, musician, designer.\nHi there! My name's John Smith and this is my creative blog. I live in the bay area with my two dogs and write about the future of web design.\n\nNeed a freelance writer? Let's get in touch!"
       },
+
       "profilePicture": {
         "order": 3,
         "type": "object",
@@ -58,11 +60,13 @@
             "default": "gravatar",
             "enum": [
               "gravatar",
-              "upload"
+              "upload",
+              "none"
             ],
             "enumNames": {
               "gravatar": "Use my Gravatar email. <a target=\"_blank\" href=\"https://en.gravatar.com/support/what-is-gravatar/\" class=\"more with-inherited-color\"><strong>Learn more</strong></a>",
-              "upload": "Upload my own image."
+              "upload": "Upload my own image.",
+              "none": "Don't show an image."
             }
           },
           "gravatarEmail": {
@@ -85,8 +89,98 @@
           }
         }
       },
-      "position": {
+
+      "icons": {
         "order": 4,
+        "title": "Social icons",
+        "description": "Check the icons you’d like to add.",
+        "type": "object",
+        "properties": {
+          "facebook": {
+            "order": 1,
+            "title": "Facebook",
+            "type": "object",
+            "properties": {
+              "enabled": {
+                "title": "Show",
+                "type": "boolean",
+                "default": true
+              },
+              "username": {
+                "showIf": {
+                  "icons.facebook.enabled": true
+                },
+                "title": "Username",
+                "description": "As in facebook.com/<strong>username</strong>",
+                "type": "string"
+              }
+            }
+          },
+          "twitter": {
+            "order": 2,
+            "title": "Twitter",
+            "type": "object",
+            "properties": {
+              "enabled": {
+                "title": "Show",
+                "type": "boolean",
+                "default": false
+              },
+              "username": {
+                "showIf": {
+                  "icons.twitter.enabled": true
+                },
+                "title": "Username",
+                "description": "As in twitter.com/<strong>username</strong>",
+                "type": "string"
+              }
+            }
+          },
+          "github": {
+            "order": 3,
+            "title": "Github",
+            "type": "object",
+            "properties": {
+              "enabled": {
+                "title": "Show",
+                "type": "boolean",
+                "default": false
+              },
+              "username": {
+                "showIf": {
+                  "icons.github.enabled": true
+                },
+                "title": "Username",
+                "description": "As in github.com/<strong>username</strong>",
+                "type": "string"
+              }
+            }
+          },
+          "linkedin": {
+            "order": 4,
+            "title": "LinkedIn",
+            "type": "object",
+            "properties": {
+              "enabled": {
+                "title": "Show",
+                "type": "boolean",
+                "default": false
+              },
+              "username": {
+                "showIf": {
+                  "icons.linkedin.enabled": true
+                },
+                "title": "Username",
+                "description": "As in linkedin.com/in/<strong>username</strong>",
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+
+      "position": {
+        "order": 5,
         "title": "Horizontal alignment",
         "type": "string",
         "default": "center",
@@ -100,6 +194,13 @@
           "center": "Center",
           "right": "Right"
         }
+      },
+
+      "backgroundColor": {
+        "order": 6,
+        "title": "Background color",
+        "type": "string",
+        "format": "color"
       }
     }
   }
