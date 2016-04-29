@@ -201,6 +201,13 @@
         "title": "Background color",
         "type": "string",
         "format": "color"
+      },
+
+      "textColor": {
+        "order": 7,
+        "title": "Text color",
+        "type": "string",
+        "format": "color"
       }
     }
   }
