@@ -13,7 +13,7 @@
 
 @media (min-width: 500px) {
   .eager-self-summary eager-wrapper {
-    max-width: 450px;
+    max-width: 480px;
   }
 }
 
@@ -40,6 +40,16 @@
 
 .eager-self-summary eager-message {
   display: block;
+}
+
+.eager-self-summary eager-message h1:first-of-type {
+  margin: 0;
+  padding: 0;
+  text-indent: 0;
+}
+
+.eager-self-summary eager-message p:first-of-type {
+  text-indent: 0;
 }
 
 .eager-self-summary eager-message p:last-of-type {
