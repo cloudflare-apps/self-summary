@@ -75,7 +75,7 @@
       return accumulator + ("<a data-eager-icon=\"" + type + "\" href=\"http://" + type + ".com/" + username + "\" target=\"_blank\">\n          " + ICONS[type] + "\n        </a>");
     }, "");
 
-    wrapper.innerHTML = "\n      <eager-details>\n        " + profileTemplate + "\n        <eager-message>" + options.message.html + "</eager-message>\n        <eager-icons>\n          " + iconTemplate + "\n        </eager-icons>\n      </eager-details>\n    ";
+    wrapper.innerHTML = "\n      <eager-details>\n        " + profileTemplate + "\n        <eager-message>" + options.message + "</eager-message>\n        <eager-icons>\n          " + iconTemplate + "\n        </eager-icons>\n      </eager-details>\n    ";
 
     element.appendChild(wrapper);
   }

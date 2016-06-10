@@ -40,10 +40,10 @@
       "message": {
         "order": 2,
         "title": "Self summary",
-        "description": "A short message about yourself written with <a target=\"_blank\" href=\"https://en.wikipedia.org/wiki/Markdown#Example\" class=\"more with-inherited-color\"><strong>Markdown</strong></a>",
+        "description": "A short message about yourself.",
         "type": "string",
-        "format": "markdown",
-        "default": "# Author, musician, designer.\nHi there! My name's John Smith and this is my creative blog. I live in the bay area with my two dogs and write about the future of web design.\n\nNeed a freelance writer? Let's get in touch!"
+        "format": "richtext",
+        "default": "<h1>Author, musician, designer.</h1>\n<p>Hi there! My name's John Smith and this is my creative blog. I live in the bay area with my two dogs and write about the future of web design.</p>\n<p>Need a freelance writer? Let's get in touch!</p>"
       },
 
       "profilePicture": {

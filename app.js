@@ -95,7 +95,7 @@
     wrapper.innerHTML = `
       <eager-details>
         ${profileTemplate}
-        <eager-message>${options.message.html}</eager-message>
+        <eager-message>${options.message}</eager-message>
         <eager-icons>
           ${iconTemplate}
         </eager-icons>
