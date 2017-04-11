@@ -1,0 +1,96 @@
+cloudflare-app[app-id="self-summary"] {
+  display: block;
+  padding: 1em;
+}
+
+cloudflare-app[app-id="self-summary"] summary-wrapper {
+  border: 1px solid transparent;
+  border-radius: 2px;
+  box-sizing: border-box;
+  display: block;
+  padding: 1.6em;
+}
+
+@media (min-width: 500px) {
+  cloudflare-app[app-id="self-summary"] summary-wrapper {
+    max-width: 480px;
+  }
+}
+
+cloudflare-app[app-id="self-summary"][data-position="left"] summary-wrapper {
+  margin-right: auto;
+}
+
+cloudflare-app[app-id="self-summary"][data-position="center"] summary-wrapper {
+  margin: auto;
+}
+
+cloudflare-app[app-id="self-summary"][data-position="right"] summary-wrapper {
+  margin-left: auto;
+}
+
+cloudflare-app[app-id="self-summary"][data-background-visibility="visible"] summary-wrapper {
+  border-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+cloudflare-app[app-id="self-summary"] summary-details {
+  display: block;
+}
+
+cloudflare-app[app-id="self-summary"] summary-message {
+  display: block;
+}
+
+cloudflare-app[app-id="self-summary"] summary-message h1:first-of-type {
+  margin: 0;
+  padding: 0;
+  text-indent: 0;
+}
+
+cloudflare-app[app-id="self-summary"] summary-message p:first-of-type {
+  text-indent: 0;
+}
+
+cloudflare-app[app-id="self-summary"] summary-message p:last-of-type {
+  margin-bottom: 0;
+}
+
+cloudflare-app[app-id="self-summary"] summary-icons {
+  align-items: center;
+  display: flex;
+  margin-top: 1em;
+}
+
+cloudflare-app[app-id="self-summary"] [data-summary-icon] {
+  height: 2.5em;
+  width: 2.5em;
+}
+
+cloudflare-app[app-id="self-summary"] [data-summary-icon] + [data-summary-icon] {
+  margin-left: 0.5em;
+}
+
+cloudflare-app[app-id="self-summary"] [data-summary-icon] > svg {
+  height: 100%;
+  width: 100%;
+}
+
+cloudflare-app[app-id="self-summary"] summary-profile-picture {
+  background-size: cover;
+  border-radius: 50%;
+  display: inline-block;
+  float: left;
+  height: 5em;
+  margin: 1.1em 1.1em 0.2em 0;
+  max-width: 100%;
+  width: 5em;
+}
+
+@media (max-width: 500px) {
+  cloudflare-app[app-id="self-summary"] summary-profile-picture {
+    float: none;
+    margin: 0.5em auto;
+    display: block;
+  }
+}
