@@ -4,7 +4,7 @@
 
 Tell your visitors a thing or two about you with this personalized avatar summary!
 
-Includes Gravatar support, custom image uploading, and markdown support!
+Includes Gravatar support, and custom image uploading!
 
 <a href="https://www.cloudflare.com/apps/self-summary/install?source=button">
   <img
