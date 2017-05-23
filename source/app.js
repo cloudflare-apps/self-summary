@@ -26,7 +26,7 @@ import md5 from 'webtoolkit.md5'
 
   function updateElement () {
     element = INSTALL.createElement(options.location, element)
-    element.setAttribute('app-id', 'self-summary')
+    element.setAttribute('app', 'self-summary')
     element.setAttribute('data-position', options.position)
 
     const {gravatarEmail, type: pictureType, url: pictureURL} = options.profilePicture
