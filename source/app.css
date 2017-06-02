@@ -94,3 +94,7 @@ cloudflare-app[app="self-summary"] summary-profile-picture {
     display: block;
   }
 }
+
+cloudflare-app[app="self-summary"] img {
+  max-width: 100%;
+}
