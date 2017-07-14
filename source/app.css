@@ -68,7 +68,7 @@ cloudflare-app[app="self-summary"] [data-summary-icon] {
 }
 
 cloudflare-app[app="self-summary"] [data-summary-icon] + [data-summary-icon] {
-  margin-left: 0.5em;
+  margin-left: .5em;
 }
 
 cloudflare-app[app="self-summary"] [data-summary-icon] > svg {
@@ -82,7 +82,7 @@ cloudflare-app[app="self-summary"] summary-profile-picture {
   display: inline-block;
   float: left;
   height: 5em;
-  margin: 1.1em 1.1em 0.2em 0;
+  margin: .8em 1.1em .2em 0;
   max-width: 100%;
   width: 5em;
 }

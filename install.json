@@ -70,8 +70,9 @@
               "profilePicture.type": "gravatar"
             },
             "title": "Gravatar email",
+            "description": "<strong>Note:</strong> This will be public.",
             "type": "string",
-            "placeholder": "your@email.com"
+            "placeholder": "jessie@example.com"
           },
           "url": {
             "order": 2,
